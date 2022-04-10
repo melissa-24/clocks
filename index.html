@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Clocks</title>
+</head>
+<body>
+    <header>
+        <h1>Time Zone clocks</h1>
+    </header>
+    <main>
+        <h2>Just a simple webpage to list the times in different time zones.</h2>
+        <h4>Word of caution code is written base on a local time zone of EST, for most it should auto correct for Daylight Savings</h4>
+        <h4>Not all Zones are listed</h4>
+        <div class="row">
+            <div class="column" id="est">
+                <h3>US Eastern Time Zone (EST):</h3>
+                <h2 id="neg4gmt" onload='est()'></h2>
+            </div>
+            <div class="column" id="utc">
+                <h3>Greenwich Mean Time GMT/UTC:</h3>
+                <h2 id="gmt" onload='gmt()'></h2>
+            </div>
+            <div class="column" id="cst">
+                <h3>US Central Time Zone (CST):</h3>
+                <h2 id="neg5gmt" onload='cst()'></h2>
+            </div>
+            <div class="column" id="mst">
+                <h3>US Mountain Time Zone (MST):</h3>
+                <h2 id="neg6gmt" onload='mst()'></h2>
+            </div>
+            <div class="column" id="pst">
+                <h3>US Pacific Time Zone (PST):</h3>
+                <h2 id="neg7gmt" onload='pst()'></h2>
+            </div>
+            <div class="column" id="akdt">
+                <h3>US Alaska Time Zone (AKDT):</h3>
+                <h2 id="neg8gmt" onload='akdt()'></h2>
+            </div>
+            <div class="column" id="hst">
+                <h3>US Hawaii Time Zone (HST):</h3>
+                <h2 id="neg10gmt" onload='hst()'></h2>
+            </div>
+            <div class="column" id="bst">
+                <h3>England Time Zone (BST):</h3>
+                <h2 id="plusgmt" onload='bst()'></h2>
+            </div>
+            <div class="column" id="ast">
+                <h3>Saudi Arabia Time Zone (AST):</h3>
+                <h2 id="plus3gmt" onload='ast()'></h2>
+            </div>
+            <div class="column" id="ist">
+                <h3>India Time Zone (IST):</h3>
+                <h2 id="plus5-5gmt" onload='ist()'></h2>
+            </div>
+        </div>
+    </main>
+    <footer>
+        By Melissa
+    </footer>
+    <script src="./scripts.js"></script>
+    <script>
+        setInterval(gmt, 8000)
+        setInterval(est, 2000)
+        setInterval(cst, 8000)
+        setInterval(mst, 8000)
+        setInterval(pst, 8000)
+        setInterval(akdt, 8000)
+        setInterval(hst, 8000)
+        setInterval(bst, 8000)
+        setInterval(ast, 8000)
+        setInterval(ist, 8000)
+    </script>
+</body>
+</html>

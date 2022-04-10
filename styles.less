@@ -1,0 +1,47 @@
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@bg:#002e09;
+@font: #c4bdbd;
+@pink: #ffc0cb;
+@border: 3px groove @pink;
+@time: #b8d6dd;
+
+body {
+    .flexcolumn();
+    background-color: @bg;
+    background-image: url("https://www.transparenttextures.com/patterns/strange-bullseyes.png");
+    color: @font;
+
+    header, main, footer {
+        .flexcolumn();
+    }
+    main {
+        width: 85%;
+
+        .row {
+            .flexrow();
+            flex-wrap: wrap;
+
+            .column {
+                .flexcolumn();
+                border: @border;
+                margin: 2em;
+                padding: 1em;
+
+                h2 {
+                    color: @time;
+                }
+            }
+        }
+    }
+}
