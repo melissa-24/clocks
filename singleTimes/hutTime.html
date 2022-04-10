@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <main>
+        <h1>DojoTime</h1>
+        <div class="row">
+            <div class="column" id="est">
+                <h3>US Eastern Time Zone (EST):</h3>
+                <h2 id="neg4gmt" onload='est()'></h2>
+            </div>
+            <div class="column" id="ist">
+                <h3>India Time Zone (IST):</h3>
+                <h2 id="plus5-5gmt" onload='ist()'></h2>
+            </div>
+        </div>
+    </main>
+    <script src="./scripts.js"></script>
+    <script>
+        setInterval(est, 4000)
+        setInterval(ist, 4000)
+    </script>
+</body>
+</html>
