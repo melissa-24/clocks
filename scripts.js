@@ -1,50 +1,89 @@
 function est() {
-    est = new Date().toLocaleTimeString('en-GB')
+    est = new Date(new Date().getTime() + -4*60*60*1000).toUTCString('en-GB')
     // console.log('EST: ', est)
-    document.getElementById('neg4gmt').innerHTML = est
+    adjust = est.slice(-13)
+    cut = adjust.substr(0,10)
+    zone = 'EST'
+    final = cut + zone
+    document.getElementById('neg4gmt').innerHTML = final
 }
 function gmt() {
-    gmt = new Date(new Date().getTime() + +5*60*60*1000).toLocaleTimeString('en-GB')
-    console.log('gmt: ', gmt)
-    document.getElementById('gmt').innerText = gmt
+    gmt = new Date(new Date().getTime() + 60*60*1000).toUTCString('en-GB')
+    // console.log('gmt: ', gmt)
+    newGmt = gmt.slice(-13)
+    // console.log('newGmt: ', newGmt)
+    document.getElementById('gmt').innerText = newGmt
 }
 function cst() {
-    cst = new Date(new Date().getTime() + -1*60*60*1000).toLocaleTimeString('en-GB')
+    cst = new Date(new Date().getTime() + -5*60*60*1000).toUTCString('en-GB')
     // console.log('cst: ', cst)
-    document.getElementById('neg5gmt').innerText = cst
+    adjust = cst.slice(-13)
+    cut = adjust.substr(0,10)
+    zone = 'CST'
+    final = cut + zone
+    document.getElementById('neg5gmt').innerText = final
 }
 function mst() {
-    mst = new Date(new Date().getTime() + -2*60*60*1000).toLocaleTimeString('en-GB')
+    mst = new Date(new Date().getTime() + -6*60*60*1000).toUTCString('en-GB')
     // console.log('mst: ', mst)
-    document.getElementById('neg6gmt').innerText = mst
+    adjust = mst.slice(-13)
+    cut = adjust.substr(0,10)
+    zone = 'MDT'
+    final = cut + zone
+    document.getElementById('neg6gmt').innerText = final
 }
 function pst() {
-    pst = new Date(new Date().getTime() + -3*60*60*1000).toLocaleTimeString('en-GB')
+    pst = new Date(new Date().getTime() + -7*60*60*1000).toUTCString('en-GB')
     // console.log('pst: ', pst)
-    document.getElementById('neg7gmt').innerText = pst
+    adjust = pst.slice(-13)
+    cut = adjust.substr(0,10)
+    zone = 'PT'
+    final = cut + zone
+    document.getElementById('neg7gmt').innerText = final
 }
 function akdt() {
-    akdt = new Date(new Date().getTime() + -4*60*60*1000).toLocaleTimeString('en-GB')
+    akdt = new Date(new Date().getTime() + -8*60*60*1000).toUTCString('en-GB')
     // console.log('akdt: ', akdt)
-    document.getElementById('neg8gmt').innerText = akdt
+    adjust = akdt.slice(-13)
+    cut = adjust.substr(0,10)
+    zone = 'AKDT'
+    final = cut + zone
+    // console.log('final: ', final)
+    document.getElementById('neg8gmt').innerText = final
 }
 function hst() {
-    hst = new Date(new Date().getTime() + -6*60*60*1000).toLocaleTimeString('en-GB')
+    hst = new Date(new Date().getTime() + -10*60*60*1000).toUTCString('en-GB')
     // console.log('hst: ', hst)
-    document.getElementById('neg10gmt').innerText = hst
+    adjust = hst.slice(-13)
+    cut = adjust.substr(0,10)
+    zone='HST'
+    final = cut + zone
+    document.getElementById('neg10gmt').innerText = final
 }
 function bst() {
-    bst = new Date(new Date().getTime() + +5*60*60*1000).toLocaleTimeString('en-GB')
+    bst = new Date(new Date().getTime() + 60*60*1000).toUTCString('en-GB')
     // console.log('bst: ', bst)
-    document.getElementById('plusgmt').innerText = bst
+    adjust = bst.slice(-13)
+    cut = adjust.substr(0,10)
+    zone='BST'
+    final = cut + zone
+    document.getElementById('plusgmt').innerText = final
 }
 function ast() {
-    ast = new Date(new Date().getTime() + +7*60*60*1000).toLocaleTimeString('en-GB')
+    ast = new Date(new Date().getTime() + +3*60*60*1000).toUTCString('en-GB')
     // console.log('ast: ', ast)
-    document.getElementById('plus3gmt').innerText = ast
+    adjust = ast.slice(-13)
+    cut = adjust.substr(0,10)
+    zone = 'AST'
+    final = cut + zone
+    document.getElementById('plus3gmt').innerText = final
 }
 function ist() {
-    ist = new Date(new Date().getTime() + +9.5*60*60*1000).toLocaleTimeString('en-GB')
+    ist = new Date(new Date().getTime() + +5.5*60*60*1000).toUTCString('en-GB')
     // console.log('ist: ', ist)
-    document.getElementById('plus5-5gmt').innerText = ist
+    adjust = ist.slice(-13)
+    cut = adjust.substr(0, 10)
+    zone = 'IST'
+    final = cut + zone
+    document.getElementById('plus5-5gmt').innerText = final
 }
